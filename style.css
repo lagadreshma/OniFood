@@ -1,0 +1,1746 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+
+:root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+    --name: #555;
+    --red: orangered;
+    --blue: #3742fa;
+    --dark-green: #218c74;
+    --green: rgb(32, 229, 32);
+    --white: #ffffff;
+    --light: #e5e5e5;
+    --voilet: #450361;
+    --buttonhover: #EA2027;
+    --offer-code: rgb(96, 29, 29);
+    --form: #c6f9f9;
+    --add-to-cart: yellow;
+    --add1: rgb(30, 218, 247);
+    --add2: radial-gradient(#fff, rgb(233, 109, 252));
+    /* --add3: #fad390; */
+    --add3: radial-gradient(white,rgb(157, 255, 0));
+    --add4: radial-gradient(#fff, #f89e93);
+    --shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------Common CSS -------------------- */
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
+.row{
+    display:flex;
+}
+
+.heading {
+    margin-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    color: var(--blue);
+}
+
+.heading::before {
+    content: "";
+    background: var(--red);
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* index page */
+
+.header{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+.logo{
+    display: flex;
+}
+.logo h2 {
+    padding-top: 15px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.logo h2 span {
+    color: var(--red);
+}
+
+.navbar{
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+    padding: 20px 10px;
+}
+
+nav a{
+    color: var(--white);
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+nav #cart{
+    padding: 20px 30px 0px 0px;
+    color: var(--white);
+}
+
+nav a:hover,
+nav a:active{
+    color: var(--green);
+}
+
+nav a span{
+    padding: 5px 7px;
+    background-color: var(--white);
+    color: var(--red);
+    border-radius: 30%;
+    font-weight: 600;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+/* home page */
+.dropdown{
+    display: none;
+}
+.navbar ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--secondary-color);
+    color: white;
+    z-index: 20;
+}
+.dropdown ul{
+    text-align: left;
+    width: 130px;
+}
+.dropdown ul li{
+    padding: 10px;
+}
+
+
+/* offers */
+/* add1.html */
+
+.offer {
+    margin-top: 10px;
+    background: var(--add1);
+    width: 100vw;
+    height: 450px;
+}
+
+.offer .small-container {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.col-8 {
+    display: flex;
+    flex-basis: 80%;
+}
+
+.offer .col-8 img {
+    padding-top: 30px;
+}
+
+.offer .col-8 .box2 {
+    padding-top: 50px;
+    padding-left: 30px;
+}
+
+.col-8 .box2 h1 {
+    font-size: 30px;
+    padding-bottom: 50px;
+    line-height: 40px;
+    color: var(--voilet);
+}
+
+.col-8 .big-offer {
+    display: flex;
+    gap: 7px;
+    padding: 20px;
+    border-left: 3.5px dotted var(--add1);
+    border-right: 3.5px dotted var(--add1);
+    background: var(--dark-green);
+    color: var(--white);
+}
+
+.col-4 {
+    flex-basis: 20%;
+    padding: 20px;
+}
+
+.col-4 img {
+    width: 350px;
+    height: 250px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px;
+    background: var(--white);
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 400;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    color: var(--white);
+    background: var(--red);
+}
+
+
+/* add2.html */
+.offer-1 {
+    background: var(--add2);
+}
+
+.offer-1 .row {
+    display: flex;
+}
+
+.col-6 {
+    flex-basis: 50%;
+}
+
+.col-6 h1 {
+    font-size: 30px;
+    padding-top: 70px;
+    line-height: 50px;
+    padding-bottom: 30px;
+}
+
+.offer-1 .col-6 span {
+    color: var(--red);
+}
+
+.col-6 .first {
+    display: flex;
+}
+
+.col-6 img {
+    width: 300px;
+    height: 370px;
+}
+
+/* add3.html */
+.offer-2 {
+    background: var(--add3);
+    color: var(--blue);
+    padding-left: 50px;
+}
+
+.offer-2 .images {
+    display: flex;
+}
+
+/* ------  Swiperjs CSS for advertisements ------*/
+
+.swiper {
+    width: 1260px;
+    height: 450px;
+}
+
+.swiper-slide {
+    /* text-align: center;
+    font-size: 18px;
+    background: #fff; */
+    /* padding-bottom: 10px; */
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /* -webkit-align-items: center; */
+    /* align-items: center; */
+}
+
+/* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+} */
+
+
+
+/* ----------- Dishes Section ----------- */
+
+.container .row{
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+}
+.container .rate-price{
+    display: flex;
+    gap: 80px;
+}
+.grid3{
+    flex-basis: 25%;
+    max-width: 220px;
+    margin-bottom: 70px;
+}
+.col{
+    outline: none;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--white);
+}
+.col:hover {
+    box-shadow: var(--shadow);
+}
+.popular-dishes  img,
+.menu-dishes img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.container h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    padding-bottom: 10px;
+}
+.container h4{
+    font-size: 16px;
+    color: var(--name);
+    padding-bottom: 5px;
+}
+.rate{
+    display: flex;
+    background-color: var(--green);
+    padding: 3px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+.rate span{
+    font-size: 16px;
+    color: var(--white);
+}
+.add{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0px;
+    padding: 5px 10px;
+    color: var(--secondary-color);
+    background-color: var(--add-to-cart);
+    outline:none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+/* ---------------- Customers Reviews ----------------- */
+
+.col-2 {
+    display: flex;
+    gap: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Testimonials {
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.Testimonials .customer-review {
+    padding: 20px 30px;
+    box-shadow: var(--shadow);
+    padding-bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Testimonials .customer-review:hover {
+    transform: translateY(-5px);
+}
+
+.customer-review img {
+    width: 50px;
+    border-radius: 50%;
+    transition: width 0.3s ease-in-out;
+}
+
+.customer-review img:hover {
+    width: 100px;
+}
+
+.customer-review .name {
+    color: var(--name);
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.customer-review .fa {
+    color: var(--red);
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.customer-review .Rating {
+    padding-bottom: 10px;
+    color: var(--red);
+}
+
+.customer-review .Rating .material-icons-sharp {
+    font-size: 16px;
+}
+
+.customer-review p {
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--name);
+}
+
+.customer-review .fa-quote-left,
+.customer-review .fa-quote-right {
+    font-size: 20px;
+}
+
+.Testimonials a {
+    padding-left: 50px;
+    color: var(--blue);
+}
+
+
+
+/* -------------- Footer -------------- */
+
+.footer-section {
+    background: var(--secondary-color);
+    color: var(--name);
+    width: 100%;
+    padding: 30px 50px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-1 {
+    display: flex;
+    grid-template-columns: 4(1fr);
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-one,
+.footer-two,
+.footer-three,
+.footer-four {
+    min-width: 250px;
+}
+
+.footer-one img {
+    width: 120px;
+}
+
+.footer h3 {
+    color: var(--white);
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-1 p {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.footer-two p {
+    text-align: center;
+}
+
+.footer-2 p {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-three ul a {
+    color: var(--name);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-three ul a:hover {
+    color: var(--red);
+}
+
+.footer-four .social-links i {
+    color: var(--secondary-color);
+    background: var(--light);
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-four .social-links i:hover {
+    transform: translateY(-5px);
+}
+
+.social-links .fa-facebook-f:hover,
+.social-links .fa-linkedin-in:hover {
+    color: var(--blue);
+}
+
+.social-links .fa-youtube:hover {
+    color: var(--red);
+}
+
+.footer-2 p{
+    color: var(--green);
+}
+
+
+
+/* --------------- Contact Us Page ---------------- */
+
+.row {
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+.row .contact-one,
+.row .contact-two {
+    width: 45%;
+    padding: 0px 20px;
+}
+
+.contact-one {
+    margin-left: 50px;
+}
+
+.contact-one .Thank-you {
+    padding-bottom: 20px;
+}
+
+.contact-one .box {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.contact-one .box span {
+    padding-top: 5px;
+    color: var(--red);
+}
+
+.contact-one .box .desc {
+    gap: 2px;
+    color: var(--name);
+    line-height: 20px;
+    flex-direction: column;
+}
+
+.contact .contact-two {
+    background: var(--form);
+    padding: 20px;
+}
+
+.two-col {
+    display: flex;
+    gap: 10px;
+}
+
+.contact h3 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 530px;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    outline: none;
+}
+
+.map {
+    padding-bottom: 50px;
+}
+
+
+/* ------------ Sign Up Page ------------- */
+
+.sign-up .box-1 img {
+    width: 400px;
+    height: 520px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.sign-up .box-2 {
+    background: var(--form);
+    padding: 30px;
+    max-width: 800px;
+}
+
+.box-2 .link {
+    color: var(--blue);
+}
+
+.box-2 p {
+    padding-bottom: 20px;
+}
+
+.box-2 .terms {
+    color: var(--name);
+    font-size: 14px;
+}
+
+/* Login Form */
+
+.login .box-1{
+    padding: 0px 20px;
+}
+.login .box-1 img {
+    width: 500px;
+    height: 300px;
+}
+
+.login .box-2 {
+    background: var(--form);
+    padding: 20px;
+}
+
+/* invalid login msg */
+.login form .answer {
+    color: var(--buttonhover);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* About us Page */
+
+.about .row {
+    padding: 50px;
+}
+
+.about .box-1 {
+    padding-top: 90px;
+    padding-left: 50px;
+}
+
+.about .box-1 h2 {
+    color: var(--secondary-color);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.about .box-1 p {
+    color: var(--name);
+    line-height: 20px;
+    padding-bottom: 30px;
+}
+
+.about .box-1 h2 span {
+    color: var(--red);
+    font-size: 25px;
+}
+
+.about .about-links {
+    padding-top: 30px;
+}
+
+.about .about-links a {
+    color: var(--name);
+    padding-left: 10px;
+}
+
+.about-links a:hover .fa-linkedin-in {
+    color: var(--blue);
+}
+
+.about-links a:hover .fa-youtube {
+    color: var(--red);
+}
+
+.about .box-2 {
+    padding-left: 120px;
+}
+
+.about .box-2 img {
+    width: 350px;
+    height: 350px;
+    box-shadow: -10px -10px 0 0 var(--blue);
+}
+
+/* Feeback - review page */
+
+.feedback form {
+    background: var(--form);
+    padding: 20px;
+    margin: 70px;
+}
+
+.feedback form input,
+.feedback form textarea {
+    font-size: 14px;
+}
+
+.feedback form div {
+    padding-bottom: 10px;
+}
+
+
+
+/*************** cart page ***************/
+
+.grid12{
+    max-width: 1100px;
+    margin: auto;
+}
+.grid12 h1{
+    margin: 30px 0px;
+    color: var(--blue);
+    text-align: center;
+    border-bottom: 1px solid var(--light);
+}
+.cart .grid12 .table{
+    max-width: 1100px;
+}
+.grid12 .table tr,.grid12 .table th,.grid12 .table td{
+    padding: 10px 30px;
+    border-bottom: 1px solid var(--light);
+}
+.grid12 .table .dish_quantity{
+    width: 70px;
+}
+.table .update_quantity{
+    width: 170px;
+}
+.grid12 .table td div{
+    display: flex;
+}
+.cart .remove{
+    outline: none;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    padding: 7px;
+    font-weight: 400;
+}
+.cart .update{
+    width: 80px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 5px;
+    font-weight: 300;
+}
+.cart .grand-total{
+    margin-bottom: 40px;
+    display: flex;
+    gap: 650px;
+}
+.cart .grand-total .display{
+    color: var(--green);
+}
+
+/*---------------- checkout page------------------- */
+.checkout{
+    max-width: 1100px;
+    height: auto;
+    margin: 0px auto;
+}
+.checkout h1{
+    border-bottom: 1px solid var(--light);
+    padding-bottom: 10px;
+}
+.checkout form{
+    display: flex;
+    gap: 50px;
+}
+.checkout h1 span{
+    color: var(--red);
+}
+.basic-info{
+    width: 300px;
+}
+.basic{
+    background: var(--light);
+    padding-left: 10px;
+}
+.basic .user-info{
+    padding-top: 30px;
+}
+.basic-info label{
+    font-size: 14px;
+}
+.basic-info input{
+    width: 250px;
+}
+.checkout_order-details{
+    max-width: 700px;
+}
+.checkout .order-table th,.checkout .order-table td{
+    padding: 10px 20px;
+    text-align: center;
+}
+.checkout .order-table tr, th, td{
+    font-size: 14px;
+}
+.checkout-grand{
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+}
+.grandtotal h2{
+    color: var(--green);
+    padding-left: 350px;
+}
+.checkout .buttons input{
+    width: 80%;
+    color: var(--white);
+    background: var(--blue);
+}
+
+
+/* ------------ My Profile Page ------------- */
+
+.myprofile{
+    max-width: 980px;
+    margin: auto;
+}
+.profile-section{
+    margin: 50px 0px;
+    background: var(--light);
+    padding: 20px;
+}
+.profile-section form label{
+    font-size: 14px;
+    padding: 3px;
+}
+.profile-section form input{
+    width: 400px;
+}
+.myprofile .Update{
+    width: 20%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    background: var(--green);
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+
+/* --------------- My Orders Page ---------------- */
+
+.myorders_section{
+    max-width: 1100px;
+    margin: 50px auto;
+}
+.myorders{
+    margin-top: 50px;
+    box-shadow: var(--shadow);    
+}
+.myorders table tr,.myorders table th,.myorders table td{
+    padding: 30px 50px;
+}
+.Myorder-table td .status{
+    background: rgb(185, 185, 4);
+    color: var(--white);
+    padding: 5px;
+}
+.view{
+    width: 80px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 300;
+}
+
+/* ------------------ View Order Details Page ------------------ */
+
+.view_orders_section{
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 0px;
+}
+.view_orders .user_details,
+.view_orders .myorder_details{
+    max-width: 1000px;
+    background: var(--light);
+    padding: 30px;
+}
+.view_orders_section h1{
+    padding-bottom: 30px;
+}
+.view_orders_section h1 span{
+    color: var(--red);
+}
+.view_orders label{
+    font-size: 14px;
+}
+.view_orders input{
+    width: 300px;
+}
+.view_orders .cancel{
+    background: var(--red);
+    color: var(--white);
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********* Media Queries for Responsive **********/
+
+@media only screen and (max-width: 1024px){
+    
+    .offer {
+        width: 100vw;
+        height: 350px;
+    }
+    .col-8 .box2 h1 {
+        font-size: 25px;
+    }
+    .col-8 .big-offer h2 {
+        font-size: 18px;
+    }
+    .col-8 .big-offer p{
+        font-size: 14px;
+    }
+    .col-4 img {
+        width: 250px;
+        height: 250px;
+    }
+    .col-6 h1 {
+        font-size: 20px;
+        padding-top: 50px;
+        line-height: 50px;
+        padding-bottom: 30px;
+    }
+    .col-6 img {
+        width: 200px;
+        height: 300px;
+    }
+    /* ------  Swiperjs CSS for advertisements ------*/
+
+   .swiper {
+        width: 100vw;
+        height: 420px;
+    }
+
+    /* ------- for footer -------- */
+    .footer-section{
+        padding: 30px 30px;
+    }
+    .footer .footer-1{
+        gap: 30px;
+    }
+    .footer-one img {
+        width: 100px;
+    }
+    .footer-one,
+    .footer-two,
+    .footer-three,
+    .footer-four {
+        min-width: 200px;
+    }
+    .footer h3 {
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+    
+    .footer-1 p {
+        font-size: 14px;
+    }
+    .footer-four .social-links i {
+        padding: 12px;
+        font-size: 12px;
+    } 
+
+    /* contact us page */
+    .row{
+        gap: 10px;
+    }
+    .contact-one {
+        margin-left: 30px;
+    }
+    input,
+    textarea {
+       width: 420px;
+    }
+    /* login page */
+    .login .box-1 img {
+        width: 450px;
+        height: 300px;
+    }
+    /* sign up page */
+    .sign-up .box-1 img {
+        width: 300px;
+        height: 520px;
+        padding-left: 10px;
+    }
+    .sign-up .box-2 {
+        max-width: 700px;
+    }
+
+    /* cart page */
+    .cart .table img{
+        width: 100px;
+    }
+    .cart .table{
+        margin: auto;
+    }
+    .grid12 .table tr,.grid12 .table th,.grid12 .table td{
+        padding: 10px 20px;
+    }
+    .cart .grand-total{
+        gap: 500px;
+    }
+
+    /* checkout page */
+    .checkout form{
+        gap: 10px;
+    }
+    .checkout form img{
+        width: 80px;
+    }
+    .checkout .order-table th,.checkout .order-table td{
+        padding: 10px 10px;
+    }
+    .grandtotal h2{
+        padding-left: 300px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 820px){
+    
+    /* for navigation bar */
+
+    nav .logo img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo h2{
+        font-size: 22px;
+    }
+
+    nav .logo li span{
+        font-size: 14px;
+    }
+
+    .navbar a{
+        font-size: 14px;
+    }
+/* for add1 */
+    .offer .col-8 img {
+        padding-top: 20px;
+    }
+    .col-8 .box2 h1 {
+        font-size: 20px;
+    }
+
+    .col-8 .big-offer h2 {
+        font-size: 14px;
+    }
+
+    .col-8 .big-offer p{
+        font-size: 10px;
+    }
+
+    .col-6 h1 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .col-4 img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* for heading */
+    .heading{
+        font-size: 20px;
+    }
+
+    /* ------- for footer -------- */
+    .footer-section{
+        padding: 30px 20px;
+    }
+    .footer .footer-1{
+        gap: 20px;
+    }
+    .footer-one img {
+        width: 70px;
+    }
+    .footer-one,
+    .footer-two,
+    .footer-three,
+    .footer-four {
+        min-width: 170px;
+    }
+    .footer-two .logo img{
+        width: 50px;
+        height: 50px;
+    }
+    .footer-two .logo h2{
+        font-size: 18px;
+    }
+
+    /* contact us page */
+    .row .contact-one{
+        width: 35%;
+    }
+    .row .contact-two {
+       width: 59%;
+    }
+    .sign-up .box-2 {
+        max-width: 700px;
+    }
+    .map{
+        width: 100vw;
+    }
+
+    /* login page */
+    /* login page */
+    .login .box-1 img {
+        width: 300px;
+        height: 300px;
+    }
+    .login .box-2{
+        margin-right: 10px;
+    }
+    .login form div input {
+        width: 350px;
+    }
+
+    /* sign up page */
+    .sign-up .box-1 img{
+        display: none;
+    }
+
+    /* about us page */
+    .about .box-2 img{
+        width: 250px;
+        height: 400px;
+    }
+
+    /* my profile page */
+    .myprofile{
+        max-width: 700px;
+    }
+    .profile-section form input{
+        width: 300px;
+    }
+
+    /* cart page */
+    .cart .grand-total{
+        gap: 400px;
+    }
+
+    /* checkout page */
+    .checkout form{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .basic-info{
+       width: 500px;
+       margin-bottom: 30px;
+    }
+    .basic-info .basic{
+        padding: 30px;
+    }
+    .basic-info input{
+        width: 350px;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 640px){
+    
+    /* for navigation bar */
+
+    nav .logo{
+        margin-left: -90px;
+    }
+    .logo h2{
+        font-size: 20px;
+    }
+    nav a img{
+        width: 50px;
+        height: 60px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+        position: fixed;
+        width: 220px;
+        height: 100vh;
+        background: var(--secondary-color);
+        top: 0;
+        right: -250px;
+        z-index: 2;
+        transition: 1s;
+        text-align: center;
+    }
+    
+    nav .fa{
+        display: inline-block;
+        color: var(--red);
+        padding-top: 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    nav .fa-times{
+        margin-left: -120px;
+    }
+    nav .fa-bars{
+        margin-right: -40px;
+    } 
+
+    nav ul li{
+        padding: 5px 10px;
+        line-height: 5px;
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    nav ul li a{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav #cart{
+        margin-right: -150px;
+    }
+
+    /* ------  Swiperjs CSS for advertisements ------*/
+
+    .swiper {
+        width: 100vw;
+        height: 250px;
+    }
+
+    /* for adds */
+    .offer{
+        margin-top: -10px;
+    }
+    .offer .col-8 img {
+        padding-top: 10px;
+    }
+    .offer .col-8 .box2 {
+        padding-top: 10px;
+    }
+    .col-8 .box2 h1 {
+        font-size: 16px;
+        padding-bottom: 20px;
+        line-height: 20px;
+    }
+    .col-8 .box1 img{
+       width: 120px;
+       height: 170px;
+       margin-left: -20px;
+    }
+    .col-8 .big-offer{
+       padding: 10px;
+    }
+    .col-8 .big-offer h2 {
+        font-size: 14px;
+    }
+    .col-8 .big-offer p{
+        font-size: 10px;
+    }
+    .btn{
+        font-size: 12px;
+    } 
+    .col-4 img {
+        width: 90px;
+        height: 120px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    .col-6 h1{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .offer-1 img{
+        width: 100px;
+        height: 180px;
+        margin-top: 30px;
+    }
+
+    .offer-2 img{
+        width: 150px;
+        height: 200px;
+    }
+    .offer-2 .col-6 h1,
+    .offer-2 .col-6 a{
+        margin-left: -60px;
+    }
+
+    /* ---------------- Customers Reviews ----------------- */
+    .heading{
+        font-size: 20px;
+    }
+    .heading::before {
+        width: 80px;
+        height: 3px;
+        border-radius: 2px;
+    }
+    
+    .col-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .customer-review{
+        max-width: 450px;
+        text-align: center;
+    }
+
+     /* ------- for footer -------- */
+    .footer-1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer .footer-1 {
+        gap: 10px;
+    }
+    .footer-one,
+    .footer-two,
+    .footer-three,
+    .footer-four {
+       max-width: 70px;
+    }
+
+    /* contact us page */
+    .contact .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-box{
+        display: flex;
+        gap: 30px;
+    }
+    .contact-box .box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact p{
+        font-size: 14px;
+    }
+    .row .contact-one{
+        width: 100%;
+    }
+
+    /* login page */
+    .login .box-1 img {
+       display: none;
+    }
+    .login .box-2{
+        margin-right: 30px;
+    }
+
+    /* sign up page */
+    .sign-up .box-2{
+        margin: 0px 20px;
+    }
+    .sign-up .box-2 .two-col{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* about us page */
+    .about .row {
+        padding: 30px;
+    }
+    .about .box-1 {
+        padding-top: 0px;
+        padding-left: 20px;
+    }
+    .about .box-1 h2 {
+        font-size: 18px;
+    }
+    .about .box-1 h2 span {
+        font-size: 22px;
+    }
+    .about .box-1 p{
+        font-size: 14px;
+    }
+    .about .box-2 img{
+        width: 170px;
+        height: 300px;
+    }
+    /* review page */
+    .feedback div input,
+    .feedback textarea {
+        width: 330px;
+        font-size: 14px;
+    }
+
+    /* my profile page */
+    .myprofile{
+        max-width: 600px;
+    }
+    .profile-section form input{
+        width: 250px;
+    }
+
+    /* cart page */
+    .cart .grid12 .table{
+        max-width: 400px;
+    }
+    .cart .table img{
+        width: 50px;
+        height: 70px;
+    }
+    .grid12 .table tr,.grid12 .table th,.grid12 .table td{
+        padding: 10px 10px;
+    }
+    .table .update_quantity{
+        width: 100px;
+    }
+    .cart .grand-total{
+        gap: 200px;
+    }
+
+    /* my orders page */
+    .myorders table tr,.myorders table th,.myorders table td{
+        padding: 20px 10px;
+    }
+    .myorders .Myorder-table tr>th{
+        width: 50px;
+    }
+
+    /* view order-details page */
+    .view_orders input{
+        width: 250px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 420px){
+    
+    /* for navigation bar */
+
+    nav .logo{
+        margin-left: -60px;
+    }
+    .logo h2{
+        font-size: 18px;
+    }    
+    nav .fa-bars{
+        margin-right: -20px;
+    } 
+    nav #cart{
+        margin-right: -110px;
+    }
+   
+
+/* for adds */
+    .offer {
+        width: 100vw;
+        height: 300px;
+    }
+    .col-8 .box2{
+        padding-left: 20px;
+    }
+    .col-8 .box2 h1 {
+        font-size: 10px;
+        padding-bottom: 10px;
+        line-height: 18px;
+    }
+    .col-8 .box1 img{
+       width: 100px;
+       height: 150px;
+       margin-left: -40px;
+    }
+    .col-8 .big-offer{
+        padding: 10px;
+    }
+    .col-8 .big-offer h2 {
+        font-size: 10px;
+    }
+    .col-8 .big-offer p{
+        font-size: 6px;
+    }
+    .btn{
+        font-size: 10px;
+    } 
+    .col-4 img {
+        width: 70px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .offer-1 .col-6 h1,
+    .offer-1 .col-6 a{
+        margin-left: -20px;
+    }
+    .col-6 h1{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .offer-1 img{
+        width: 70px;
+        height: 150px;
+        margin-top: 30px;
+    }
+    .offer-2 img{
+        width: 120px;
+        height: 150px;
+        margin-top: 30px;
+    }
+    .offer-2 .col-6 h1,
+    .offer-2 .col-6 a{
+        margin-left: -60px;
+    }
+    
+    /* ------  Swiperjs CSS for advertisements ------*/
+
+    .swiper {
+        width: 100vw;
+        height: 250px;
+    }
+
+     /* ------- for footer -------- */
+    .footer-one,
+    .footer-two,
+    .footer-three,
+    .footer-four {
+       max-width: 300px;
+       padding: 0px 20px;
+    }
+
+    input,
+    textarea{
+        width: 300px;
+    }
+
+
+    /* contact us page */
+    .contact-one {
+        margin: 0px 10px;
+    }   
+    .contact p{
+        font-size: 12px;
+    }
+    .contact .two-col {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact h3{
+        font-size: 16px;
+    }
+    .contact .contact-two{
+        width: 350px;
+        margin-left: 20px;
+    }
+    
+    /* login page */
+    .login .box-2{
+        width: 340px;
+        margin-left: -20px;
+    }
+    .login .box-2 input{
+        width: 300px;
+    } 
+
+    /* sign up page */
+    .sign-up .box-2{
+        margin: 0px 10px;
+    }
+    
+    /* about us page */
+    .about .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .about .box-2 img{
+        width: 200px;
+        height: 200px;
+    }
+
+    /* review page */
+    .feedback{
+        margin-left: -50px;
+    }
+    .feedback form{
+        width: 360px;
+    }
+
+    /* my profile page */
+    .myprofile{
+        max-width: 360px;
+    }
+    .myprofile form .two-col{
+        display:flex;
+        flex-direction: column;
+    }
+    .profile-section form input{
+        width: 300px;
+    }
+
+    /* cart page */
+    .cart .grid12 .table{
+        max-width: 400px;
+    }
+    .cart .table img{
+        width: 50px;
+        height: 70px;
+    }
+    .grid12 .table tr,.grid12 .table th,.grid12 .table td{
+        padding: 10px 10px;
+    }
+    .table .update_quantity{
+        width: 100px;
+    }
+    .cart .grand-total{
+        gap: 200px;
+    }
+
+    /* checkout page */
+    .basic-info{
+       width: 390px;
+    }
+    .checkout form img{
+        width: 70px;
+        height: 70px;
+    }
+    .basic-info .basic{
+        padding: 20px;
+    }
+    .checkout .order-table th,.checkout .order-table td{
+        padding: 10px 5px;
+    }
+    .checkout .order-table thead tr>th{
+        width: 10px;
+    }
+    .grandtotal h2{
+        padding-left: 150px;
+    }
+
+    /* view order details page */
+    .user_details .two-col,
+    .myorder_details .two-col{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
