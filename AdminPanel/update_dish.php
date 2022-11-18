@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+include "connection.php";
+include "function.php";
+
+if(!isset($_SESSION['IS_LOGIN'])){
+    redirect("admin_login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,10 +58,8 @@
     <div class="col-2">
 
 
-    <?php
+<?php
 
-include "connection.php";
-include "function.php";
 
 
 $id = $_GET['id'];

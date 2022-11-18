@@ -1,7 +1,12 @@
 <?php
 
+session_start();
 include "connection.php";
 include "function.php";
+
+if(!isset($_SESSION['IS_LOGIN'])){
+    redirect("admin_login.php");
+}
 
 
 if(isset($_POST['delete'])){

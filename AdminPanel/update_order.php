@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+include "connection.php";
+include "function.php";
+
+if(!isset($_SESSION['IS_LOGIN'])){
+    redirect("admin_login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +55,6 @@
 
     
     <?php
-
-include "connection.php";
-include "function.php";
 
 $order_id = $_GET['id'];
 
